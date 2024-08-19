@@ -1,0 +1,309 @@
+
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+body{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400 ;
+    font-style: normal;
+    background-color: #e7e5e4;
+    color: #151011;
+
+}
+div,ul,nav,header,footer,a,li,label{
+    margin: 0;
+    padding: 0;
+}
+/* ---------- HEADER SECTION ----------*/
+.header{
+    background-color: white ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: header;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-size: 20px;
+}
+.header__open-nav-button{
+    size: 3rem;
+    position: absolute;
+    right: 10px;
+}
+.header__checkbox{
+    display: none;
+}
+.header__nav{
+    display: none;
+    background-color: white;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: -1;
+}
+.header__nav-list{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-evenly;
+
+}
+.header__checkbox:checked ~ .header__nav{
+    display: flex;
+
+}
+
+.header__logo{
+    max-width: 100%;
+    width: 48px;
+    margin: 10px 20px;
+}
+.header__nav-item{
+    list-style: none;
+
+}
+.header__nav-item a{
+    color: #151011;
+}
+.header__nav-item a:not(:is(:hover,:active)){
+    text-decoration: none;
+}
+/* ---------- HEADER QUERIES ----------*/
+
+@container header (min-width:768px)
+{
+    .header__nav{
+        display: block;
+        position: static;
+        height: auto;
+        width: auto;
+        justify-content: space-between;
+    }
+    .header__nav-list{
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 20px;
+        margin-right: 40px;
+    }
+    .header__open-nav-button{
+        display: none;
+    }
+}
+/* ---------- HEADER ENDS ----------*/
+/* ---------- TEAM SECTION --------- */
+.team{
+    container-name: team;
+    container-type: inline-size;
+    min-height: 140vh;
+    max-height: 145vh;
+    box-sizing: border-box;
+    background-image: url(images/fotoequiponecocheadesenfoque.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+h1{
+    margin: 0;
+    font-size: 3.2rem;
+    text-wrap: balance;
+}
+
+.team__item-conteiner{
+ position: relative;   
+ z-index: 10;
+ margin: auto ;
+ text-align: center;
+ max-width: 700px;
+ text-wrap: pretty;
+}
+.team__overlay{
+    max-height: 145vh;
+    min-height: 140vh;
+    width: 100%;
+    background-color: rgba(252, 252, 252, 0.4);
+    position: absolute;
+    z-index: 1;
+}
+.team__img{  
+    min-width: 200px;
+    max-width: 50%;
+    margin: 20px;
+    }
+    .team__description{
+        font-size: larger;
+    }
+/* ---------- TEAM QUERIES --------- */
+@container team (min-width:768px){
+    .team {
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+
+    .team__item-conteiner {
+        max-width: 70%;
+        padding: 20px;
+    }
+
+    .team__img {
+        max-width: 50%;
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+    .team__description{
+        font-size: medium;
+    }}
+/* ---------- TEAM ENDS --------- */
+/* ---------- NOTICE SECTION --------- */
+.notice{
+    background-color: #fff;
+    color: #151011;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    container-name: notice;
+    container-type: inline-size;
+}
+.notice__project-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+    min-height: 100vh;
+}
+.notice__project{
+    background-image:  linear-gradient(#0004, #000400), url(images/Escudo-PK-_3_red.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+}
+.notice__title{
+    font-size: 3rem;
+}
+.notice__project:hover{
+    opacity: 0.7;
+    outline: 2px solid white;
+}
+
+/* ---------- NOTICE QUERIES --------- */
+@container notice (min-width:900px){
+    .notice__project-container{
+        grid-template-columns: repeat(auto-fill, minmax(420px,1fr));
+    }
+    .notice__project:first-child{
+        grid-column: span 2;   
+    }
+    .notice__project:nth-child(6){
+        grid-column: span 2;
+    }
+}
+@container notice (min-width:1080px){
+    .notice__project-container{
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    }
+    .notice__project:first-child{
+        grid-column: span 2;   
+        grid-row: span 2;
+    }
+    .notice__project:last-child{
+        grid-column: span 4;
+    }
+
+}
+/* ---------- NOTICE ENDS --------- */
+
+/* ---------- CONTACT SECTION --------- */
+.form{
+    min-height: 
+    50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #0009;
+    container-name: form;
+    container-type: inline-size;
+}
+
+.form__form{
+    padding: 12px;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+ border: none;
+ background-image: linear-gradient(#15101122,#15101144);
+}
+.form__input-container :is(input,textarea){
+    width: 100%;
+    padding: 9px ;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #0003;
+}
+.form__input-container textarea{
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+.form__input-container input[type="submit"]{
+    padding: 12px;
+    background-color: #151011;
+    color: #e7e5e4;
+    width: 100%;
+}
+.form__title{
+    font-size: 2.2rem;
+    color: #151011;
+}
+/* ---------- CONTACT QUERIES --------- */
+@container form (min-width: 600px){
+    .form__form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "name lastname"
+        "email email"
+        "message message"
+        "button button";
+        gap: 12px;
+        background-image: linear-gradient(#15101122,#15101144);
+        border: none;
+        box-shadow: 0px 0px 40px #0003;
+        padding: 30px;
+        border-radius: 12px;
+    }
+    .form__input-container:first-child{
+        grid-area: name;
+    }
+    .form__input-container:nth-child(2){
+        grid-area: lastname;
+    }
+    .form__input-container:nth-child(3){
+        grid-area: email;
+    }
+    .form__input-container:nth-child(4){
+        grid-area: message;
+    }
+    .form__input-container:nth-child(5){
+        grid-area: button;
+    }
+}

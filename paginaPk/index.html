@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <input class="header__checkbox" type="checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-button" role="button"><img src="images/134216_menu_lines_hamburger_icon.png" alt="Icono open-menu"></label>
+        <div class="header__logo-container">
+         <a href="index.html">   <img  class="header__logo" src="images/Escudo-PK-_3_.svg" alt="Escudo monocromatico"></a>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#team">Inicio</a></li>
+                <li class="header__nav-item"><a href="#notice">Noticias</a></li>
+                <li class="header__nav-item"><a href="#contact">Sobre Nosotros</a></li>
+                <li class="header__nav-item"><a href="tienda.html">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="team" id="team">
+        <div class="team__overlay">
+        <div class="team__item-conteiner">
+            <div class="team__img-conteiner">
+            <img class="team__img" src="images/Escudo PK (3).png" alt="Equipo Punto Karazuno">
+            </div>
+            <h1 >PUNTO KARAZUNO BEACH HANDBALL</h1>
+            <p class="team__description">Somos un equipo de beach handball (balonmano playa) Neuquino, conformado por mas de 30 jugadores de 15 a 25 años en su mayoria, competimos a nivel nacional todos los años, y somos de los pocos equipos que entrenan el año entero</p>
+        </div>
+    </div>
+    </main>
+    <section class="notice" id="notice">
+        <h2 class="notice__title">SECCION DE NOTICIAS</h2>
+        <div class="notice__project-container">
+            <div class="notice__project">   
+                <h2 class="notice__project-name">NOTICIA 1</h2>
+            </div>
+            <div class="notice__project">
+                <h2 class="notice__project-name">NOTICIA 2</h2>
+            </div>
+            <div class="notice__project">
+                <h2 class="notice__project-name">NOTICIA 3</h2>
+            </div>
+            <div class="notice__project">
+                <h2 class="notice__project-name">NOTICIA 4</h2>
+            </div>
+            <div class="notice__project">
+                <h2 class="notice__project-name">NOTICIA 5</h2>
+            </div>
+            <div class="notice__project">
+                <h2 class="notice__project-name">NOTICIA 6</h2>
+            </div>  
+        </div>
+    </section>
+    <section class="form" id="contact">
+        <h2 class="form__title">Contactanos</h2>
+        <form class="form__form">
+            <div class="form__input-container">
+                <label for="">Nombre
+                    <input type="text" placeholder="Miguel">
+                </label>
+            </div>
+            <div class="form__input-container">   
+                <label for="">Apellido
+                <input type="text" placeholder="Merentiel">
+            </label>
+            </div>
+            <div class="form__input-container">
+                <label for="">E-mail
+                    <input type="email" placeholder="miguelmerentiel@gmail.com">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label for="">Mensaje
+                    <textarea  placeholder="Escriba su Mensaje Aqui"></textarea> 
+                </label>
+            </div>
+            <div class="form__input-container">
+                <input type="submit">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
